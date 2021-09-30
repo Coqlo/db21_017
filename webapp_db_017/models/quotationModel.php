@@ -17,7 +17,8 @@ public static function getAll()
     require("connection_connect.php");
     $sql = "SELECT quo_id,quoDate,condition_pay,quotation.emp_id,employee.empName,quotation.cus_id,customer.cusName  
             FROM customer INNER JOIN quotation ON customer.cus_id = quotation.cus_id
-            INNER JOIN employee ON quotation.emp_id = employee.emp_id";
+            INNER JOIN employee ON quotation.emp_id = employee.emp_id 
+            ORDER BY quotation.quo_id ASC";
     $result = $conn->query($sql);
     while($my_data = $result->fetch_assoc())
     {
