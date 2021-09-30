@@ -9,7 +9,10 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
     $action = 'home';
 }?>
     <html>
-        <head></head>
+        <head><meta http-equiv="Content-Language" content="th">
+              <meta http-equiv="content-Type" content="text/html; charset=window-874">
+              <meta http-equiv="content-Type" content="text/html; charset=tis-620">
+        </head>
             <body>
                 
                 <br> [<a href="?controller=pages&action=home">หน้าแรก</a>] [<a href="?controller=quotation&action=index">ใบเสนอราคา</a>]<br>
