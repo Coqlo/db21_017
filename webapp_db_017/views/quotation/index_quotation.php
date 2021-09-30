@@ -16,6 +16,5 @@
             <td>$quotation->cus_name</td>
           </tr>";
 }
-
+echo "</table>";
 ?>
-</table>
