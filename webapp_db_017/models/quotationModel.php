@@ -36,5 +36,14 @@ public static function getAll()
     require("connection_close.php");
     return $quotationList;
 }
+public static function add($quo_id,$date,$condition,$emp_id,$cus_id)
+{
+    require("connection_connect.php");
+    $sql="insert into quotation(quo_id,quoDate,condition_pay,emp_id,cus_id)values
+    ('$quo_id','$date','$condition','$emp_id','$cus_id')";
+    $result=$conn->query($sql);
+    require("connection_close.php");
+    return "add success $result rows";
+}
 }
 ?>
