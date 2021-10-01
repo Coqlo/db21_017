@@ -21,7 +21,7 @@
             <td>$quotation->emp_id</td>
             <td>$quotation->cus_name</td>
             <td>$quotation->cus_id</td>
-            <td>อัพเดท</td>
+            <td><a href="?controller=quotation&action=update&quo_id=$quotation->quo_id">อัพเดท</td>
             <td>ลบ</td>
           </tr>";
 }
