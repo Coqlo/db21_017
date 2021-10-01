@@ -26,5 +26,14 @@ class QuotationController
 
         QuotationController::index(); //call function index on QuotationController
     }
+
+    public function update()
+    {
+        $id = $_GET['quo_id'];
+        $quotation = Quotation::get($id);
+        $employee_list = Employee::getAll();
+        $customer_list = Customer::getAll();
+        require_once('views/quotation/updateForm.php');
+    }
 }
 ?>
