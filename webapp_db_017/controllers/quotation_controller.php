@@ -27,7 +27,7 @@ class QuotationController
         QuotationController::index(); //call function index on QuotationController
     }
 
-    public function update()
+    public function updateForm()
     {
         $id = $_GET['quo_id'];
         $quotation = Quotation::get($id);

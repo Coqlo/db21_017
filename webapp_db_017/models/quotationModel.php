@@ -45,5 +45,19 @@ public static function add($quo_id,$date,$condition,$emp_id,$cus_id)
     require("connection_close.php");
     return "add success $result rows";
 }
+public static function get($id)
+{
+    require("connection_connect.php");
+    $sql = "select * from quotation";
+    $result = $conn->query($sql);
+    $my_data=$result->fetch_assoc();
+    $quo_id = $my_data['quo_id'];
+    $quo_date = $my_data['quoDate'];
+    $condition = $my_data['condition_pay'];
+    $emp_id = $my_data['emp_id'];
+    $cus_id = $my_data['cus_id'];
+    require("connection_close.php");
+    return new Quotation($quo_id,$quo_date,$condition,$emp_id,$cus_id);
+}
 }
 ?>
