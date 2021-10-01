@@ -1,5 +1,5 @@
 <?php
-$controllers=array('pages'=>['home','error'],'quotation'=>['index','newQuotation','addQuotation']);//list controller and action
+$controllers=array('pages'=>['home','error'],'quotation'=>['index','newQuotation','addQuotation','update']);//list controller and action
 function call($controller,$action)
 {
     require_once("controllers/".$controller."_controller.php");
