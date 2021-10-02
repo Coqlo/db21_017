@@ -2,13 +2,13 @@
     <label>รหัสใบเสนอราคา <input type="text" name="quo_id"/></label><br>
     <label>วันที่ออกใบเสนอราคา <input type="date" name="quoDate" value="<?php echo date("Y-m-d"); ?>"/></label><br>
     <label>เงื่อนไขชำระ <input type="text" name="condition_pay"/></label><br>
-    <label>พนักงาน<select name ="emp_id">
+    <label>รหัสพนักงาน<select name ="emp_id">
     <?php foreach($employee_list as $emp)
     {
         echo  "<option value=$emp->emp_id>$emp->emp_id</option>";
     }?>
      </select></label><br>
-      <label>ลูกค้า<select name ="cus_id">
+      <label>รหัสลูกค้า<select name ="cus_id">
     <?php foreach($customer_list as $cus)
     {
         echo  "<option value=$cus->cus_id>$cus->cus_id</option>";

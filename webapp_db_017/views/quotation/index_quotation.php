@@ -16,13 +16,14 @@
     echo "<tr> 
             <td>$quotation->quo_id</td>
             <td>$quotation->date</td>
-            <td>$quotation->conditon_pay</td>
+            <td>$quotation->condition_pay</td>
             <td>$quotation->emp_name</td>
             <td>$quotation->emp_id</td>
             <td>$quotation->cus_name</td>
             <td>$quotation->cus_id</td>
-            <td><a href=?controller=quotation&action=updateForm&quo_id=$quotation->quo_id>อัพเดท</td>
-            <td>ลบ</td>
+            <td><a href=?controller=quotation&action=updateForm&quo_id=$quotation->quo_id>อัพเดท</a></td>
+            <td><a href=?controller=quotation&action=deleteConfirm&quo_id=$quotation->quo_id>ลบ</a></td>
+            
           </tr>";
 }
 echo "</table>";
