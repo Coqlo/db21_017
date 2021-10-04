@@ -1,3 +1,4 @@
+<p> ธนชาติ โฆษิตโรจนฤกษ์ 6020550532 หมู่ 841 </p>
 สร้างใบเสนอราคาใหม่<a href="?controller=quotation&action=newQuotation">คลิก</a><br>
 <table border = 1>
     <tr>

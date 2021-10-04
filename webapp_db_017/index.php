@@ -14,7 +14,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
               <meta http-equiv="content-Type" content="text/html; charset=tis-620">
         </head>
             <body>
-                
+                <?php echo "controller = ".$controller.",action = ".$action;?>
                 <br> 
                     [<a href="?controller=pages&action=home">หน้าแรก</a>]
                     [<a href="?controller=quotation&action=index">ใบเสนอราคา</a>]
