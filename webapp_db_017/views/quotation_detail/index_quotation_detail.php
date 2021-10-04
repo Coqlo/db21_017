@@ -1,3 +1,4 @@
+เพิ่มสินค้าในใบเสนอราคา<a href="?controller=quotation_detail&action=newQuotationDetail">คลิก</a><br>
 <table border = 1>
     <tr>
         <td>รหัสรายละเอียดใบเสนอราคา</td>
@@ -18,7 +19,8 @@
             <td>$quotation_detail->nameColor</td>
             <td>$quotation_detail->amountColor</td>
             <td>$quotation_detail->amountProduct</td>
-            
+            <td><a href=?controller=quotation_detail&action=updateForm&qd_id=$quotation_detail->qd_id>อัพเดท</a></td>
+            <td><a href=?controller=quotation_detail&action=deleteConfirm&qd_id=$quotation_detail->qd_id>ลบ</a></td>
           </tr>";
 }
 echo "</table>";

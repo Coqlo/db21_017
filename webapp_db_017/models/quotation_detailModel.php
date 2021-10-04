@@ -43,5 +43,58 @@ public static function getAll()
     return $quotation_deailList; 
 }
 
+
+public static function add($amountColor,$amountProduct,$color_id,$quo_id)
+{
+    require("connection_connect.php");
+    $sql="insert into quotation_detail(amountColor,amountProduct,color_id,quo_id)values
+    ('$amountColor','$amountProduct','$color_id','$quo_id')";
+    $result=$conn->query($sql);
+    require("connection_close.php");
+    return "add success $result rows";
+}
+
+
+public static function get($qd_id)
+{
+    require("connection_connect.php");
+    $sql = "SELECT qd_id,quo_id,quotation_detail.color_id,color.nameColor,amountColor,amountProduct 
+    FROM quotation_detail 
+    INNER JOIN color ON quotation_detail.color_id=color.color_id
+    WHERE qd_id='$qd_id'";
+    $result = $conn->query($sql);
+    $my_data=$result->fetch_assoc();
+    $qd_id = $my_data['qd_id'];
+    $quo_id = $my_data['quo_id'];
+    $color_id = $my_data['color_id'];
+    $nameColor = $my_data['nameColor'];
+    $amountColor = $my_data['amountColor'];
+    $amountProduct = $my_data['amountProduct'];
+    require("connection_close.php");
+    return new Quotation($qd_id,$quo_id,$color_id,$nameColor,$amountColor,$amountProduct);
+}
+
+
+public static function update($qd_id,$amountColor,$amountProduct,$color_id,$quo_id)
+{
+    require("connection_connect.php");
+    $sql = "UPDATE quotation_detail 
+    SET qd_id='$qd_id',amountColor='$amountColor',amountProduct='$amountProduct',color_id='$color_id',quo_id='$quo_id'
+    WHERE quotation_detail.qd_id='$qd_id'";
+    $result = $conn->query($sql);
+    require("connection_close.php");
+    return "update success $result row";
+}
+
+
+public static function delete($qd_id)
+{
+    require("connection_connect.php");
+    $sql = "DELETE FROM quotation_detail WHERE quotation_detail.qd_id = '$qd_id'";
+    $result=$conn->query($sql);
+    require("connection_close.php");
+    return "delete success $result row";
+}
+
 }
 ?>

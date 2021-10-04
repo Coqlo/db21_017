@@ -1,6 +1,6 @@
 <?php
 $controllers=array('pages'=>['home','error'],'quotation'=>['index','newQuotation','addQuotation','updateForm','update','deleteConfirm','delete']
-,'quotation_detail'=>['index']);//list controller and action
+,'quotation_detail'=>['index','newQuotationDetail','addQuotationDetail','updateForm','update','deleteConfirm','delete']);//list controller and action
 function call($controller,$action)
 {
     require_once("controllers/".$controller."_controller.php");
