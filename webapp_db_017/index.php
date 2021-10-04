@@ -15,7 +15,11 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
         </head>
             <body>
                 
-                <br> [<a href="?controller=pages&action=home">หน้าแรก</a>] [<a href="?controller=quotation&action=index">ใบเสนอราคา</a>]<br>
+                <br> 
+                    [<a href="?controller=pages&action=home">หน้าแรก</a>]
+                    [<a href="?controller=quotation&action=index">ใบเสนอราคา</a>]
+                    [<a href="?controller=quotation_detail&action=index">รายละเอียดใบเสนอราคา</a>]
+                <br>
                 <?php require_once("routes.php");?>
             </body>
     </html>
