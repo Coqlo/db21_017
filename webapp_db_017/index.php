@@ -12,6 +12,7 @@ if(isset($_GET['controller'])&&isset($_GET['action']))
         <head><meta http-equiv="Content-Language" content="th">
               <meta http-equiv="content-Type" content="text/html; charset=window-874">
               <meta http-equiv="content-Type" content="text/html; charset=tis-620">
+              <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         </head>
             <body>
                 <?php echo "controller = ".$controller.",action = ".$action;?>
