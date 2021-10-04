@@ -30,7 +30,6 @@ class QuotationDetailController
         $quotation_detail = Quotation_detail::get($id);
         $quotation_list = Quotation::getAll();
         $color_list = Color::getAll();
-        echo "$quotation_detail->qd_id,$quotation_detail->quo_id,$quotation_detail->color_id,$quotation_detail->amountColor,$quotation_detail->amountProduct";
         require_once('views/quotation_detail/updateForm_quotation_detail.php');
     }
 

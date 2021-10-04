@@ -55,13 +55,13 @@ public static function add($amountColor,$amountProduct,$color_id,$quo_id)
 }
 
 
-public static function get($qd_id)
+public static function get($id)
 {
     require("connection_connect.php");
     $sql = "SELECT qd_id,quo_id,quotation_detail.color_id,color.nameColor,amountColor,amountProduct 
     FROM quotation_detail 
     INNER JOIN color ON quotation_detail.color_id=color.color_id
-    WHERE qd_id='$qd_id'";
+    WHERE qd_id='$id'";
     $result = $conn->query($sql);
     $my_data=$result->fetch_assoc();
     $qd_id = $my_data['qd_id'];
@@ -71,7 +71,7 @@ public static function get($qd_id)
     $amountColor = $my_data['amountColor'];
     $amountProduct = $my_data['amountProduct'];
     require("connection_close.php");
-    return new Quotation($qd_id,$quo_id,$color_id,$nameColor,$amountColor,$amountProduct);
+    return new Quotation_detail($qd_id,$quo_id,$color_id,$nameColor,$amountColor,$amountProduct);
 }
 
 
@@ -80,7 +80,7 @@ public static function update($qd_id,$amountColor,$amountProduct,$color_id,$quo_
     require("connection_connect.php");
     $sql = "UPDATE quotation_detail 
     SET qd_id='$qd_id',amountColor='$amountColor',amountProduct='$amountProduct',color_id='$color_id',quo_id='$quo_id'
-    WHERE quotation_detail.qd_id='$qd_id'";
+    WHERE qd_id='$qd_id'";
     $result = $conn->query($sql);
     require("connection_close.php");
     return "update success $result row";

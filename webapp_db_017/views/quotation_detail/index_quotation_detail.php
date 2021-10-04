@@ -1,3 +1,4 @@
+นายธนภัทร โตดิลกเวชช์ 6020550541 หมู่ 841<br>
 เพิ่มสินค้าในใบเสนอราคา<a href="?controller=quotation_detail&action=newQuotationDetail">คลิก</a><br>
 <table border = 1>
     <tr>
